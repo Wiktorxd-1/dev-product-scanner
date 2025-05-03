@@ -1,6 +1,6 @@
 const getPlaceName = async (placeId) => {
     try {
-        const response = await fetch(`https://www.roblox.com/places/api-get-details?assetId=${placeId}`);
+        const response = await fetch(`https://games.roblox.com/v1/games/multiget-place-details?placeIds=${placeId}`);
         
         if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
